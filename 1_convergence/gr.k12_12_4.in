@@ -1,0 +1,31 @@
+&CONTROL
+  calculation = 'scf'
+  prefix = 'gr'
+  outdir = './tmp'
+  pseudo_dir = '../pseudo'
+/
+&SYSTEM
+  ibrav = 4
+  celldm(1) = 4.649
+  celldm(3) = 2.7276
+  nat = 4
+  ntyp = 1
+  ecutwfc = 45.0
+  ecutrho = 360.0
+  occupations = 'smearing'
+  smearing = 'marzari-vanderbilt'
+  degauss = 0.02
+  vdw_corr = 'grimme-d2'
+/
+&ELECTRONS
+  conv_thr = 1.0d-8
+/
+ATOMIC_SPECIES
+  C 12.011 C.pbe-n-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS (crystal)
+  C 0.000000000 0.000000000 0.250000000
+  C 0.000000000 0.000000000 0.750000000
+  C 0.333333333 0.666666667 0.250000000
+  C 0.666666667 0.333333333 0.750000000
+K_POINTS automatic
+  12 12 4 0 0 0

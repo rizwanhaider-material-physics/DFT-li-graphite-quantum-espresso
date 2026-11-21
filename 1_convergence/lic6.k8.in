@@ -1,0 +1,36 @@
+&CONTROL
+  calculation = 'scf'
+  prefix = 'lic6'
+  outdir = './tmp'
+  pseudo_dir = '../pseudo'
+/
+&SYSTEM
+  ibrav = 4
+  celldm(1) = 8.070
+  celldm(3) = 0.8664
+  nat = 7
+  ntyp = 2
+  ecutwfc = 45.0
+  ecutrho = 360.0
+  occupations = 'smearing'
+  smearing = 'marzari-vanderbilt'
+  degauss = 0.02
+  vdw_corr = 'grimme-d3'
+  dftd3_version = 4
+/
+&ELECTRONS
+  conv_thr = 1.0d-8
+/
+ATOMIC_SPECIES
+  Li 6.94 li_pbe_v1.4.uspp.F.UPF
+  C 12.011 C.pbe-n-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS (crystal)
+  Li 0.000000000 0.000000000 0.000000000
+  C  0.333333333 0.000000000 0.500000000
+  C  0.333333333 0.333333333 0.500000000
+  C  0.000000000 0.333333333 0.500000000
+  C  0.666666667 0.000000000 0.500000000
+  C  0.666666667 0.666666667 0.500000000
+  C  0.000000000 0.666666667 0.500000000
+K_POINTS automatic
+  8 8 8 0 0 0
